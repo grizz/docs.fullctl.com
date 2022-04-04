@@ -10,9 +10,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
 
-      - name: Install according to poetry
-        uses: grizz/workflow/poetry@v1
+      - name: Install venv according to poetry
+        uses: 20c/workflows/poetry@v1
 
-      - name: Run tests
+      - name: Deploy to GitHub Pages
         run: |
           poetry run mkdocs gh-deploy --force
